@@ -1,0 +1,36 @@
+.titlecs {
+    text-align: left;
+    display: flex;
+    font-size: 22pt;
+    justify-content: left;
+    font-family: Montserrat, sans-serif;
+    color:lemonchiffon;
+  } 
+.buttons {
+  font-size: medium;
+  font-weight: 400;
+  font-family: Montserrat, sans-serif;
+  color:rgba(252,249,196);
+}
+.buttonssmall {
+  font-size: small;
+  font-weight: 400;
+  font-family: Montserrat, sans-serif;
+  color:rgba(252,249,196);
+  
+}
+.dividers
+{
+  height: 20px;
+  border-right-color: rgba(252,249,196);
+  
+  border-right-width: 3px;
+}
+.pawicon {
+  text-align: left;
+  display: flex;
+  width: 7vh ;
+  height:7vh ;
+  justify-content: left;
+  
+}

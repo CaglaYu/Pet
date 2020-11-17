@@ -1,0 +1,46 @@
+Golden Retriever 
+Labrador Retriever
+Malta Terrieri
+Yorkshire Terrier
+Bull Terrier
+Dogo Argentino
+Sivas Kangal
+Pug
+Beagle
+Kurt Köpeği
+Pekingese (Pekinez)
+St. Bernard (Saint Bernard)
+Akita İnu
+Bulldog
+Cocker Spaniel
+Cavalier King Charles Spaniel
+Poodle
+Collie
+Border Collie
+Sosis (Dachshund)
+Chow Chow
+Shar Pei
+Basset Hound
+Dalmaçyalı
+Tazı
+Jack Russell
+Shih Tzu
+Chihuahua
+Papillon
+Pomeranian
+Sibirya Kurdu
+Afgan Tazısı
+Rottweiler
+Pitbull
+Samoyed
+Vizsla
+Alaska Kurdu (Malamut)
+Kaniş
+İrlanda Seteri
+Danua
+Hokkaido
+Akbaş
+Cane Corso Italiano
+Doberman
+
+

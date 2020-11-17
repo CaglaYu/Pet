@@ -1,0 +1,54 @@
+﻿<mat-card class="loginform">
+    <mat-card-header>
+        <mat-card-title>Login</mat-card-title>
+    </mat-card-header>
+    <p></p>
+    <div class="card-body">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()" class="loginform">
+            <mat-form-field class="full-width" appearance="standard">
+                <mat-label>Kullanıcı Adı</mat-label>
+                <input matInput formControlName="username" >
+                <mat-error *ngIf="form.get('username').hasError('required') && firstError === 'username'">
+                    Lütfen kullanıcı adını boş bırakmayınız.
+                </mat-error>
+                <mat-error *ngIf="form.get('username').hasError('minlength')">
+                    Kullanıcı adı en az 4 karakter olmalıdır.
+                </mat-error>
+        
+                <mat-error *ngIf="form.get('username').hasError('maxlength')">
+                    Kullanıcı adı 30 karakterden uzun olamaz.
+                </mat-error>
+        
+                <mat-error *ngIf="form.get('username').hasError('pattern')">
+                    Kullanıcı adı yalnızca harf ve rakamlardan oluşabilir.
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field class="full-width" appearance="standard">
+                <mat-label>Şifre</mat-label>
+                <input matInput formControlName="password" [type]="hide ? 'password' : 'text'">   
+                <mat-icon style="cursor: pointer;" matSuffix (click)="setHide()">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>      
+                <mat-error *ngIf="form.get('password').hasError('required') && firstError === 'password'">
+                    Lütfen şifreyi boş bırakmayınız.
+                </mat-error>
+                <mat-error *ngIf="form.get('password').hasError('minlength')">
+                    Şifre en az 6 karakter olmalıdır.
+                </mat-error>
+        
+                <mat-error *ngIf="form.get('password').hasError('maxlength')">
+                    Şifre 30 karakterden uzun olamaz.
+                </mat-error>
+            </mat-form-field>
+            
+            <div class="form-group">
+                <button mat-raised-button style="height: 4%; " color="primary" [ngClass]="{'disabled':loading == true}" >
+                    <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                    Login
+                </button>&nbsp;&nbsp;&nbsp;
+                <a routerLink="../register" class="btn btn-link">Register</a>
+            </div> 
+        </form>
+    </div>
+</mat-card>
+<div class="alert" [class.visible]="isVisible"> 
+    {{messageText}}
+  </div>

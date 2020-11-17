@@ -1,0 +1,85 @@
+<div fxLayout="column" fxLayoutAlign="space-evenly center " >
+    
+      
+      
+      <p></p>
+      <mat-card class="cardleft" >
+        
+          <mat-card-title class="head">EVCİL HAYVAN ARAMA KURTARMA</mat-card-title>
+        <p></p>
+        <p></p>
+        <mat-card-content>
+          Bu platform, kaybolmuş evcil hayvanını arayanlar ile, kaybolmuş halde rastladıkları evcil hayvanların sahiplerini arayanları eşleştirmek amacıyla hazırlanmıştır.
+        </mat-card-content>
+      </mat-card> 
+
+      <p></p>
+      <p></p>
+      
+      <mat-card class="cardleft2">
+      
+      <mat-card-content>
+      
+        <div fxLayout="row"   fxLayoutAlign="space-evenly center" >
+          <div fxLayout="column" fxLayoutAlign="space-around " fxFlex="45" >  
+            <mat-label class="mid" >&nbsp;En Son Kayıp Hayvan İlanları</mat-label>
+          <p></p>
+              <app-carousel [autoPlayDuration]="5000" animation="slide" [isNavigationVisible]="true" 
+              [isThumbnailsVisible]="true" [slides]="slides1"
+              [slideTemplateRef]="slide" [thumbnailTemplateRef]="thumbnail"></app-carousel>
+              <ng-template #slide let-slide>
+                <div [ngStyle]="{
+                    'background-size': 'cover',
+                    'background-image': 'url(' + slide.url + ')',
+                    'background-repeat': 'no-repeat',
+                    'width': '100%',
+                    'height': '100%'
+                  }">
+                </div>
+              </ng-template>
+              <ng-template #thumbnail let-slide>
+                  <div [ngStyle]="{
+                      'background-size': 'cover',
+                      'background-image': 'url(' + slide.url + ')',
+                      'background-repeat': 'no-repeat',
+                      'background-position': 'center center',
+                      'width': '100%',
+                      'height': '100%'
+                    }"></div>
+              </ng-template>     
+          </div>
+          <div fxLayout="column" fxLayoutAlign="space-evenly " ></div>
+          <div fxLayout="column" fxLayoutAlign="space-evenly "  fxFlex="45" >
+              <mat-label class="mid" color="accent">&nbsp;En Son Bulunmuş Hayvan İlanları</mat-label>
+              <p></p>
+              <app-carousel [autoPlayDuration]="5000" animation="slide" [isNavigationVisible]="true" 
+              [isThumbnailsVisible]="true" [slides]="slides2"
+              [slideTemplateRef]="slide" [thumbnailTemplateRef]="thumbnail"></app-carousel>
+              <ng-template #slide let-slide>
+                <div [ngStyle]="{
+                    'background-size': 'cover',
+                    'background-image': 'url(' + slide.url + ')',
+                    'background-repeat': 'no-repeat',
+                    'width': '100%',
+                    'height': '100%'
+                  }">
+                </div>
+              </ng-template>
+              <ng-template #thumbnail let-slide>
+                  <div [ngStyle]="{
+                      'background-size': 'cover',
+                      'background-image': 'url(' + slide.url + ')',
+                      'background-repeat': 'no-repeat',
+                      'background-position': 'center center',
+                      'width': '100%',
+                      'height': '100%'
+                    }"></div>
+              </ng-template> 
+          </div>
+      </div  >  
+     
+    </mat-card-content>
+  </mat-card> 
+    
+  </div>
+  

@@ -1,1 +1,43 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans&family=Raleway&family=Roboto&display=swap');    
+
+.expanded-toolbar {
+  justify-content: space-between;
+}
+
+h1 {
+  text-align: center;
+}
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --unit-1: 4px;
+  --elevation-1: 1;
+  --min-height-carousel: calc(var(--unit-1) * 78);
+  --color-brand-1: #009688; /*material teal 500*/
+  /*--color-brand-1: #DD2C00*/
+  
+}
+
+body {
+  margin: 0;
+  
+  height: 100vh;
+  width: 100vw;
+  padding: var(--unit-1);
+  font-family: sans-serif;
+}
+.cardleft {
+  display: flex;
+  justify-content: left;
+  width: 80%;
+  
+}
+.cardleft2 {
+  
+  justify-content: left;
+  width: 80%;
+  height: 80%;
+}

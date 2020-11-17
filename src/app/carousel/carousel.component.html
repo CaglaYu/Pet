@@ -1,0 +1,26 @@
+<div class="carousel">
+	<!-- slides -->
+	<ul class="slides">
+		<li class="slide" *ngFor="let slide of slides; let i = index;" [@slideState]="getAnimationSlideState(i)" 
+		(@slideState.start)="animationStarted($event)"
+        (@slideState.done)="animationDone($event)">
+			<ng-container *ngTemplateOutlet="slideTemplateRef; context: { $implicit: slide }"></ng-container>
+		</li>
+	</ul>
+	<!-- navigations & thumbnails -->
+	<div class="navigations">
+		
+		<button mat-raised-button style="height: 4%; " color="primary" (click)="select(activeSlides.previous)" 
+		*ngIf="slides.length > 1 && isNavigationVisible">
+            <mat-icon color="warn" >arrow_forward</mat-icon></button>
+		<div>
+			<ol class="thumbnails" *ngIf="slides.length > 1 && isThumbnailsVisible">
+				<li *ngFor="let slide of slides; let i = index;" [class.is-active]="i === activeSlides.current" (click)="select(i)">
+					<ng-container *ngTemplateOutlet="thumbnailTemplateRef; context: { $implicit: slide }"></ng-container>
+				</li>
+			</ol>
+		</div> 
+		<button mat-raised-button style="height: 4%; " color="primary" (click)="select(activeSlides.next)" *ngIf="slides.length > 1 && isNavigationVisible">
+            <mat-icon color="warn">arrow_back</mat-icon></button>
+	</div>
+</div>
