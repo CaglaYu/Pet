@@ -17,7 +17,7 @@ const accountModule = () => import('./account/account.module').then(x => x.Accou
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
-  { path: 'home', component: HomeComponent },
+  { path: 'home', component: HomeComponent }, 
   { path: 'eklepet', component: EklepetComponent, canActivate: [AuthGuard] },
   { path: 'duzeltpet/:id', component: DuzeltpetComponent, canActivate: [AuthGuard] },
   { path: 'lostpet', component: LostpetComponent   },
